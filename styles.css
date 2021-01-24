@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --grey: #f2f2f2;
+    --bordergrey: #dadce0;
+    --footertext: #4c4c4c;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--footertext);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+
+
+}
+
+.linkshead {
+    margin-top: 15px;
+
+}
+
+.linkshead>a {
+    color: black;
+}
+
+li {
+
+    padding: 4px;
+}
+
+#glogo {
+    display: block;
+    margin: 0 auto;
+    padding-top: 8%;
+}
+
+#textsearch {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 40rem 15px 40px;
+    border-radius: 20px;
+    border-color: var(--bordergrey);
+    border-style: solid;
+    border-width: thin;
+    outline: none;
+}
+
+.inputcontainer i{
+    position: absolute;
+}
+
+/*#mglass {
+    padding: 18px 0 0 630px;
+    color: #4c4c4c;
+    width: 10px;
+    text-align: left;
+}
+
+#microph {
+    padding: 18px 0 0 1190px;
+    color: #4c4c4c;
+    width: 10px;
+    text-align: left;
+}*/
+
+#textsearch:hover {
+    box-shadow: 0 2px 8px -3px darkgrey;
+
+}
+
+#buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px;
+    
+}
+
+.submit {
+    padding: 10px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    color: #4c4c4c;
+    outline: none;
+}
+
+.submit:hover {
+    box-shadow: 0 2px 8px -3px darkgrey;
+    border-style: solid;
+    border-width: thin;
+    border-color: #dadce0;
+}
+
+#changelang {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+#changelang>a {
+    color: #0d0a9e;
+
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#countryfooter,
+#bottomfooter {
+    background-color: var(--grey);
+    border-top: thin solid var(--bordergrey);
+    padding: 12px 0;
+    color: var(--footertext);
+}
+
+#countryfooter {
+    padding-left: 18px;
+}
+
+#bottomfooter {
+    display: flex;
+    justify-content: space-between;
+}
+
+span>a {
+    padding: 0 16px 0 18px;
+}
