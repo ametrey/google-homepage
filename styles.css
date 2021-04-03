@@ -1,31 +1,28 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 :root {
     --grey: #f2f2f2;
     --bordergrey: #dadce0;
     --footertext: #4c4c4c;
+    --darkgrey: darkgrey;
 }
 
 html {
     font-size: 10px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
+
+
 
 body {
     font-size: 1.4rem;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
 }
 
-a {
-    text-decoration: none;
-    color: var(--footertext);
-}
-
-a:hover {
-    text-decoration: underline;
-}
+/* Header */
 
 ul {
     list-style: none;
@@ -36,68 +33,119 @@ ul {
 
 }
 
-.linkshead {
+.linksheader {
     margin-top: 15px;
-
-}
-
-.linkshead>a {
-    color: black;
-}
-
-li {
-
     padding: 4px;
+
 }
+
+
+/* Links */
+
+
+a {
+    text-decoration: none;
+    color: var(--footertext);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* GSearch Section*/
+
+.box {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+
+}
+
 
 #glogo {
-    display: block;
-    margin: 0 auto;
-    padding-top: 8%;
+    margin-top: 150px;
 }
 
+form {
+
+    text-align: center;
+
+}
+
+
 #textsearch {
-    display: block;
+
     margin: 20px auto;
-    padding: 15px 40rem 15px 40px;
-    border-radius: 20px;
+    margin-bottom: -20px;
+    padding: 15px 38rem 15px 40px;
+    border-radius: 25px;
     border-color: var(--bordergrey);
     border-style: solid;
     border-width: thin;
     outline: none;
 }
 
-.inputcontainer i{
-    position: absolute;
-}
-
-/*#mglass {
-    padding: 18px 0 0 630px;
-    color: #4c4c4c;
-    width: 10px;
-    text-align: left;
-}
-
-#microph {
-    padding: 18px 0 0 1190px;
-    color: #4c4c4c;
-    width: 10px;
-    text-align: left;
-}*/
-
 #textsearch:hover {
-    box-shadow: 0 2px 8px -3px darkgrey;
+    box-shadow: 0 2px 8px -3px var(--darkgrey);
 
 }
 
-#buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    margin: 10px;
+/* Mic and Magnifiying glass button */
+
+.microphone,
+.camera,
+.searchmg {
+
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin: auto;
+   
+    border: none;
+    background: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.microphone {
+    background-image: url(images/Google-7.svg);
+    transform: translate(1075%, -70%);
+}
+
+.camera {
+    background-image: url(images/cameraimages.svg);
+    transform: translate(820%, -250%);
     
 }
+
+.searchmg {
+    background-image: url(images/mgimage.svg);
+    transform: translate(950%, -350%);
+}
+
+.mglass {
+
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: right;
+    transform: translate(98%, -200%);
+    border: none;
+    background: transparent;
+    background-image: url(images/Google-5.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+/* Search buttons */
+
+
 
 .submit {
     padding: 10px 16px;
@@ -110,24 +158,28 @@ li {
 }
 
 .submit:hover {
-    box-shadow: 0 2px 8px -3px darkgrey;
+    box-shadow: 0 2px 8px -3px var(--darkgrey);
     border-style: solid;
     border-width: thin;
     border-color: #dadce0;
 }
 
-#changelang {
-    display: block;
-    margin: 0 auto;
+
+/* Change Language Div */
+
+#changelang p {
+
+    margin: 20px auto;
     text-align: center;
-    padding-top: 20px;
 
 }
 
-#changelang>a {
+#changelang>p>a {
     color: #0d0a9e;
 
 }
+
+/* Footer */
 
 footer {
     position: absolute;
@@ -154,4 +206,85 @@ footer {
 
 span>a {
     padding: 0 16px 0 18px;
+}
+
+
+
+/* ADVANCED SEARCH CSS */
+
+#advancedHeader {
+  position: fixed;
+  width: 100%;
+  background-color: var(--grey);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.advul .advlist {
+    padding: 0 20px 0 20px;
+}
+
+#advsearchbanner {
+    margin-top: 80px;
+    padding: 10px 0 30px 3%;
+    border-bottom: thin solid var(--grey);
+    font-size:  2rem;
+    font-weight: bold;
+    color: rgb(216, 40, 40) ;
+}
+
+#findwith {
+    display: flex;
+    width: 59.8%;
+    justify-content: space-between;
+    text-align: left;
+    align-items: left;
+    margin: 30px 0 20px 20px;
+    font-size: 1.8rem;
+}
+
+
+
+#formadv {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 30px 0 20px 20px;
+}
+
+#formadv .form-group {
+    display: flex;
+    text-align: left;
+    padding-top: 15px;
+}
+#formadv .form-group input {
+    width: 40%;
+    height: 25px;
+    border: 1px solid #afafaf;
+}
+#formadv .form-group label {
+    width: 15%;
+}
+
+.clarification {
+    width: 40%;
+    margin: 0px 0 0px 10px;
+}
+
+#buttonbl {
+    text-align: right;
+    width: 55.7%;
+}
+
+#blue-button {
+    font-weight: bold;
+    color: white;
+    background-color: #1d93e2;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    padding: 8px;
+
 }
